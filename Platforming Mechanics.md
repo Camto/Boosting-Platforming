@@ -14,7 +14,7 @@ A 'boost' is a sudden burst of speed in any given direction.
 If <b>Boosting</b> is <i>0</i> <i>(<b>not</b> dashing)</i>:
 	If <b>Boosting</b> is <b>not</b> <i>-1</i> <i>(<b>not</b> pounding)</i>:
 		If <b>Surface</b> is <b>not</b> <i>wall</i> <i>(<b>not</b> wall jumping)</i>:
-			If <b>Surface/b> is <i>ground</i> <i>(standing)</i>:
+			If <b>Surface</b> is <i>ground</i> <i>(standing)</i>:
 				
 			Else <i>(in the air)</i>:
 				If holding left:
