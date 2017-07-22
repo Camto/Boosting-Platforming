@@ -1,5 +1,0 @@
-function Game() { // Game loop!
-	
-	
-	
-}
