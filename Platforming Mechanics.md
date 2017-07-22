@@ -64,5 +64,13 @@ If <b>Boosting</b> is <i>0</i> <i>(<b>not</b> dashing)</i>:
 	Else <i>(pounding)</i>:
 		Move vertically.
 Else <i>(dashing)</i>:
+	If <b>Boosting</b> is <b>more than</b> <i>7</i> <i>(speeding up)</i>:
+		If speed is left <i>(speed up to the left)</i>:
+			Change speed to left.
+		Else <i>(speed up to the right):
+			Change speed to right.
+	Else <i>(slowing down)</i>:
+		Apply friction.
+	Move horizontally.
 	Decrease <b>Boosting</b> by <i>1</i>.
 </pre>
