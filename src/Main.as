@@ -41,9 +41,7 @@ package {
 			for(y = 0; y < level.length; y++) {
 				for(x = 0; x < level[y].length; x++) {
 					if(level[y][x]) {
-						
 						blocks.push(new Block(x * 20, y * 20));
-						
 					}
 				}
 			}
@@ -55,9 +53,7 @@ package {
 		}
 		
 		private function game(event:Event):void {
-			
 			player.update(blocks, keys);
-			
 		}
 		
 	}
