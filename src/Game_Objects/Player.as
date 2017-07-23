@@ -35,12 +35,12 @@ package Game_Objects {
 							}
 							
 							xv *= 0.8;
+							yv += 0.9;
 							
 							if((keys.press_up || keys.press_w) && boosts) {
 								
 								yv = -15;
 								boosts--;
-								surface = "air";
 								
 							}
 							
@@ -68,7 +68,6 @@ package Game_Objects {
 								yv = 0;
 								boosting = 15;
 								boosts--;
-								trace(boosts);
 								
 							}
 							
@@ -105,10 +104,10 @@ package Game_Objects {
 								xv = 2;
 							}
 							
-							if((keys.press_up || keys.press_w) && (keys.hold_right || keys.hold_d)) { // Wall jump!
+							if((keys.press_up || keys.press_w) && (keys.hold_left || keys.hold_a)) { // Wall jump!
 								
 								xv = 5;
-								yv = 10;
+								yv = -10;
 								
 							}
 							
@@ -118,10 +117,10 @@ package Game_Objects {
 								xv = -2;
 							}
 							
-							if((keys.press_up || keys.press_w) && (keys.hold_left || keys.hold_a)) { // Wall jump!
+							if((keys.press_up || keys.press_w) && (keys.hold_right || keys.hold_d)) { // Wall jump!
 								
 								xv = -5;
-								yv = 10;
+								yv = -10;
 								
 							}
 							
@@ -145,10 +144,36 @@ package Game_Objects {
 				
 			}
 			
-			x += xv;
-			y += yv;
+			surface = "air";
 			
-			/*
+			x += xv;
+			
+			collided = false;
+			
+			for(count = 0; count < blocks.length; count++) { // Loop through all the blocks.
+				if(collide(blocks[count])) { // Check if they collide.
+					collided = true; // BAM!
+				}
+			}
+			
+			if(collided) { // If you hit something...
+				
+				x -= xv; // ...bounce back!
+				
+				if(xv > 0) { // Check for surface.
+					surface = "right wall";
+				} else {
+					surface = "left wall";
+				}
+				
+				boosts = 0; // No boosting on walls.
+				
+				xv = 0;
+				
+			}
+			
+			y += yv; // Now check for the y.
+			
 			collided = false;
 			
 			for(count = 0; count < blocks.length; count++) {
@@ -159,10 +184,16 @@ package Game_Objects {
 			
 			if(collided) {
 				
-				// collision
+				y -= yv;
+				
+				if(yv > 0) {
+					surface = "ground";
+					boosts = 2; // Refill boosts!
+				}
+				
+				yv = 0;
 				
 			}
-			*/
 			
 		}
 		
