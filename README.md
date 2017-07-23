@@ -35,7 +35,7 @@ If <b>Boosting</b> is <i>0</i> <i>(<b>not</b> dashing)</i>:
 				Move vertically.
 				If pressed left <b>and</b> <b>Boosts</b> is <b>more than</b> <i>0</i> <i>(dash boosting to the left)</i>:
 					Set speed to left.
-					Set <b>Boosting</b> to <i>1</i>.
+					Set <b>Boosting</b> to <i>15</i>.
 					Decrease <b>Boosts</b> by <i>1</i>.
 				If pressed right <b>and</b> <b>Boosts</b> is <b>more than</b> <i>0</i> <i>(dash boosting to the right)</i>:
 					Set speed to right.
@@ -65,10 +65,7 @@ If <b>Boosting</b> is <i>0</i> <i>(<b>not</b> dashing)</i>:
 		Move vertically.
 Else <i>(dashing)</i>:
 	If <b>Boosting</b> is <b>more than</b> <i>7</i> <i>(speeding up)</i>:
-		If speed is left <i>(speed up to the left)</i>:
-			Change speed to left.
-		Else <i>(speed up to the right)</i>:
-			Change speed to right.
+		Disapply friction.
 	Else <i>(slowing down)</i>:
 		Apply friction.
 	Move horizontally.

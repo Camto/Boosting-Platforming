@@ -39,16 +39,6 @@ package Other {
 		
 		public function key_down(event:KeyboardEvent):void {
 			
-			last_up = hold_up;
-			last_left = hold_left;
-			last_down = hold_down;
-			last_right = hold_down;
-			
-			last_w = hold_w;
-			last_a = hold_a;
-			last_s = hold_s;
-			last_d = hold_d;
-			
 			switch(event.keyCode) {
 				
 				case 38:
@@ -85,67 +75,9 @@ package Other {
 				
 			}
 			
-			if(!last_up && hold_up) {
-				press_up = true;
-			} else {
-				press_up = false;
-			}
-			
-			if(!last_left && hold_left) {
-				press_left = true;
-			} else {
-				press_left = false;
-			}
-			
-			if(!last_down && hold_down) {
-				press_down = true;
-			} else {
-				press_down = false;
-			}
-			
-			if(!last_right && hold_right) {
-				press_right = true;
-			} else {
-				press_right = false;
-			}
-			
-			if(!last_w && hold_w) {
-				press_w = true;
-			} else {
-				press_w = false;
-			}
-			
-			if(!last_a && hold_a) {
-				press_a = true;
-			} else {
-				press_a = false;
-			}
-			
-			if(!last_s && hold_s) {
-				press_s = true;
-			} else {
-				press_s = false;
-			}
-			
-			if(!last_d && hold_d) {
-				press_d = true;
-			} else {
-				press_d = false;
-			}
-			
 		}
 		
 		public function key_up(event:KeyboardEvent):void {
-			
-			last_up = hold_up;
-			last_left = hold_left;
-			last_down = hold_down;
-			last_right = hold_down;
-			
-			last_w = hold_w;
-			last_a = hold_a;
-			last_s = hold_s;
-			last_d = hold_d;
 			
 			switch(event.keyCode) {
 				
@@ -183,6 +115,10 @@ package Other {
 				
 			}
 			
+		}
+		
+		public function update():void {
+			
 			if(!last_up && hold_up) {
 				press_up = true;
 			} else {
@@ -230,6 +166,16 @@ package Other {
 			} else {
 				press_d = false;
 			}
+			
+			last_up = hold_up;
+			last_left = hold_left;
+			last_down = hold_down;
+			last_right = hold_down;
+			
+			last_w = hold_w;
+			last_a = hold_a;
+			last_s = hold_s;
+			last_d = hold_d;
 			
 		}
 		

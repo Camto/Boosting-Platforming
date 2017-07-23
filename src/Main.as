@@ -53,7 +53,10 @@ package {
 		}
 		
 		private function game(event:Event):void {
+			
+			keys.update();
 			player.update(blocks, keys);
+			
 		}
 		
 	}
