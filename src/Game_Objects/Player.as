@@ -193,7 +193,7 @@ package Game_Objects {
 				
 				boosting = 0;
 				
-				if (yv > 0) {
+				if(yv > 0) {
 					y = Math.min.apply(null, colliders) - 18;
 					surface = "ground";
 					boosts = 2; // Refill boosts!
