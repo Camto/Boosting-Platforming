@@ -3,8 +3,8 @@ package Game_Objects {
 	
 	public class Square extends Sprite {
 		
-		private var w:Number;
-		private var h:Number;
+		public var w:Number;
+		public var h:Number;
 		
 		public function Square(x:Number = 190, y:Number = 190, w:Number = 20, h:Number = 20):void {
 			

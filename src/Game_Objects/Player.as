@@ -21,6 +21,7 @@ package Game_Objects {
 			
 			var count:Number = 0;
 			var collided:Boolean = false;
+			var colliders:Array = new Array();
 			
 			if(!boosting) { // (not dashing)
 				if(boosting != -1) { // (not pounding)
@@ -149,20 +150,24 @@ package Game_Objects {
 			x += xv;
 			
 			collided = false;
+			colliders = new Array();
 			
 			for(count = 0; count < blocks.length; count++) { // Loop through all the blocks.
 				if(collide(blocks[count])) { // Check if they collide.
 					collided = true; // BAM!
+					colliders.push(blocks[count].x); // Register the block that are hit.
 				}
 			}
 			
 			if(collided) { // If you hit something...
 				
-				x -= xv; // ...bounce back!
+				boosting = 0;
 				
-				if(xv > 0) { // Check for surface.
+				if (xv > 0) { // Check for surface.
+					x = Math.min.apply(null, colliders) - 18;
 					surface = "right wall";
 				} else {
+					x = Math.max.apply(null, colliders) + 20;
 					surface = "left wall";
 				}
 				
@@ -175,20 +180,25 @@ package Game_Objects {
 			y += yv; // Now check for the y.
 			
 			collided = false;
+			colliders = new Array();
 			
 			for(count = 0; count < blocks.length; count++) {
 				if(collide(blocks[count])) {
 					collided = true;
+					colliders.push(blocks[count].y);
 				}
 			}
 			
 			if(collided) {
 				
-				y -= yv;
+				boosting = 0;
 				
-				if(yv > 0) {
+				if (yv > 0) {
+					y = Math.min.apply(null, colliders) - 18;
 					surface = "ground";
 					boosts = 2; // Refill boosts!
+				} else {
+					y = Math.max.apply(null, colliders) + 20;
 				}
 				
 				yv = 0;
