@@ -159,7 +159,7 @@ package Game_Objects {
 				}
 			}
 			
-			if(collided) { // If you hit something...
+			if(collided) { // If you hit something.
 				
 				boosting = 0;
 				
