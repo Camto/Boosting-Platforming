@@ -49,13 +49,13 @@ void Player::update(std::vector<Block>& blocks) {
 					}
 					
 					if((sf::Keyboard::isKeyPressed(sf::Keyboard::Comma) | sf::Keyboard::isKeyPressed(sf::Keyboard::G)) & boosts > 0) {
-						speed = {-7.5, 0};
+						speed = {-20, 0};
 						doing = boosting_left;
 						boosts--;
 					}
 					
 					if((sf::Keyboard::isKeyPressed(sf::Keyboard::Period) | sf::Keyboard::isKeyPressed(sf::Keyboard::H)) & boosts > 0) {
-						speed = {7.5, 0};
+						speed = {20, 0};
 						doing = boosting_right;
 						boosts--;
 					}
@@ -117,7 +117,7 @@ void Player::update(std::vector<Block>& blocks) {
 		
 		case boosting_left:
 			
-			speed.x *= 0.925;
+			speed.x *= 0.85;
 			if(speed.x > -1)
 				doing = nothing;
 			
@@ -125,7 +125,7 @@ void Player::update(std::vector<Block>& blocks) {
 		
 		case boosting_right:
 			
-			speed.x *= 0.925;
+			speed.x *= 0.85;
 			if(speed.x < 1)
 				doing = nothing;
 			
