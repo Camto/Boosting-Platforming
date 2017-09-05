@@ -5,8 +5,11 @@
 > _(Gameplay from C++ version.)_
 
 ## Download and/or play
-* [C++ Version](https://github.com/Camto/Boosting-Platforming/releases)
-* [ActionScript version](https://camto.github.io/Boosting-Platforming/)
+* [Download C++ Version](https://github.com/Camto/Boosting-Platforming/releases)
+* [Play ActionScript version](https://camto.github.io/Boosting-Platforming/)
+* [Download ActionScript Version](https://github.com/Camto/Boosting-Platforming/raw/master/Boosting%20Platforming.swf)
+
+> **WARNING:** The description of boosting platforming under here is for the ActionScript version. For the description of the mechanics of the C++ version are to be found, uncommented in the C++ source code.
 
 # Platforming Mechanics
 ## Boosts:
