@@ -1,3 +1,13 @@
+# Boosting Platforming
+
+## Gameplay
+![Gameplay](Gameplay.gif)
+> _(Gameplay from C++ version.)_
+
+## Download and/or play
+* [C++ Version](https://github.com/Camto/Boosting-Platforming/releases)
+* [ActionScript version](https://camto.github.io/Boosting-Platforming/)
+
 # Platforming Mechanics
 ## Boosts:
 A 'boost' is a sudden burst of speed in any given direction.

@@ -1,0 +1,6 @@
+#ifndef got_icon
+
+dirt_icon ICON "dirt.ico"
+
+#define got_icon
+#endif // got_icon
